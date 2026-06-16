@@ -1,0 +1,174 @@
+/* ── Reset básico ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Página ── */
+body {
+  font-family: Georgia, serif;
+  background-image: url(Assets/vangohg.jpeg);
+  padding: 2rem 1rem;
+}
+
+/* ── Cabeçalho ── */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header .coracao {
+  display: block;
+  font-size: 1.8rem;
+  color: #ffd000;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #ffc415;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #7d6400;
+  margin-top: 0.3rem;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  /* Adicione estas quatro linhas: */
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e8ddd8;
+}
+
+/* ── Formulário ── */
+form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e8ddd8;
+}
+
+/* ── Seções internas ── */
+section {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0e8e4;
+}
+
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #015582;
+  margin-bottom: 1rem;
+}
+
+/* ── Labels e inputs ── */
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: #5a4a4a;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d9cece;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #2f2e3a;
+  background: #fdfaf9;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #142490;
+}
+
+/* ── Checkbox ── */
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #142490;
+}
+
+label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-top: 0;
+}
+
+/* ── Botão ── */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #01485d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #4f6169;
+}
+
+/* ── Mensagem de sucesso ── */
+.sucesso {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.sucesso-coracao {
+  font-size: 2rem;
+  color: #8b4a52;
+  margin-bottom: 1rem;
+}
+
+.sucesso h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #3a2e2e;
+  margin-bottom: 0.5rem;
+}
+
+.sucesso p {
+  color: #7a6a6a;
+  font-size: 0.95rem;
+}
+
+/* ── Rodapé ── */
+footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #b0a0a0;
+}

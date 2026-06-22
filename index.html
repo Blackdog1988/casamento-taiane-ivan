@@ -115,17 +115,13 @@
       const acompanhante = checkAcompanhante.checked
         ? document.getElementById('nome-acompanhante').value.trim()
         : 'Não'
-      const filhos       = checkFilhos.checked
-        ? document.getElementById('nome-filhos').value.trim()
-        : 'Não'
-
+      
 
       const url = 'https://docs.google.com/forms/d/e/1FAIpQLSfu6C2jQLjlbSt5F33S6hbauzO_hbqjBPqCs-y1Iua2f9RBJA/formResponse'
         + '?entry.981768616='  + encodeURIComponent(nome)
         + '&entry.411202514='  + encodeURIComponent(telefone)
         + '&entry.1274919399=' + encodeURIComponent(acompanhante)
-        + '&entry.774592381='  + encodeURIComponent(filhos)
-
+       
       // Envia em segundo plano sem redirecionar o usuário
       fetch(url, { method: 'POST', mode: 'no-cors' })
 

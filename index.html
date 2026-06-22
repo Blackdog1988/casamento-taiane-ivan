@@ -44,21 +44,6 @@
         </div>
       </section>
 
-      <!-- BLOCO 3: Filhos -->
-      <section>
-        <h2>Filhos</h2>
-
-        <label>
-          <input type="checkbox" id="tem-filhos">
-          Levarei filhos
-        </label>
-
-        <div id="campo-filhos">
-          <label for="nome-filhos">Nome(s) do(s) filho(s)</label>
-          <input type="text" id="nome-filhos" name="filhos" placeholder="Ex: Ana, Pedro">
-        </div>
-      </section>
-
       <button type="submit">Confirmar minha presença</button>
 
     </form>
@@ -68,20 +53,15 @@
     <p>Taiane &amp; Ivan · Maio 2027</p>
   </footer>
 
-  <!-- JavaScript sempre no final do body -->
   <script>
-    // 1. Encontra os elementos pelo id
     const checkAcompanhante = document.getElementById('tem-acompanhante')
     const campoAcompanhante = document.getElementById('campo-acompanhante')
 
     const form              = document.getElementById('form-confirmacao')
     const inputNome         = document.getElementById('nome')
 
-    // 2. Esconde os campos condicionais quando a página carrega
     campoAcompanhante.style.display = 'none'
-    campoFilhos.style.display       = 'none'
 
-    // 3. Mostra/esconde campo de acompanhante conforme o checkbox
     checkAcompanhante.addEventListener('change', function() {
       if (checkAcompanhante.checked) {
         campoAcompanhante.style.display = 'block'
@@ -90,42 +70,27 @@
       }
     })
 
-    // 4. Mostra/esconde campo de filhos conforme o checkbox
-    checkFilhos.addEventListener('change', function() {
-      if (checkFilhos.checked) {
-        campoFilhos.style.display = 'block'
-      } else {
-        campoFilhos.style.display = 'none'
-      }
-    })
-
-    // 5. Envio do formulário
     form.addEventListener('submit', function(event) {
       event.preventDefault()
 
-      // Validação do campo obrigatório
       if (inputNome.value.trim() === '') {
         alert('Por favor, informe seu nome completo.')
         return
       }
 
-      // Captura os valores — se checkbox desmarcado, envia 'Não'
       const nome         = inputNome.value.trim()
       const telefone     = document.getElementById('telefone').value.trim()
       const acompanhante = checkAcompanhante.checked
         ? document.getElementById('nome-acompanhante').value.trim()
         : 'Não'
-      
 
       const url = 'https://docs.google.com/forms/d/e/1FAIpQLSfu6C2jQLjlbSt5F33S6hbauzO_hbqjBPqCs-y1Iua2f9RBJA/formResponse'
         + '?entry.981768616='  + encodeURIComponent(nome)
         + '&entry.411202514='  + encodeURIComponent(telefone)
         + '&entry.1274919399=' + encodeURIComponent(acompanhante)
-       
-      // Envia em segundo plano sem redirecionar o usuário
+
       fetch(url, { method: 'POST', mode: 'no-cors' })
 
-      // Substitui o formulário pela mensagem de sucesso
       form.innerHTML = `
         <div class="sucesso">
           <p class="sucesso-coracao">♡</p>

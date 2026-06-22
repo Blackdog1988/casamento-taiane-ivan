@@ -45,7 +45,20 @@
       </section>
 
       <!-- BLOCO 3: Filhos -->
-     
+      <section>
+        <h2>Filhos</h2>
+
+        <label>
+          <input type="checkbox" id="tem-filhos">
+          Levarei filhos
+        </label>
+
+        <div id="campo-filhos">
+          <label for="nome-filhos">Nome(s) do(s) filho(s)</label>
+          <input type="text" id="nome-filhos" name="filhos" placeholder="Ex: Ana, Pedro">
+        </div>
+      </section>
+
       <button type="submit">Confirmar minha presença</button>
 
     </form>
@@ -60,9 +73,6 @@
     // 1. Encontra os elementos pelo id
     const checkAcompanhante = document.getElementById('tem-acompanhante')
     const campoAcompanhante = document.getElementById('campo-acompanhante')
-
-    const checkFilhos       = document.getElementById('tem-filhos')
-    const campoFilhos       = document.getElementById('campo-filhos')
 
     const form              = document.getElementById('form-confirmacao')
     const inputNome         = document.getElementById('nome')
